@@ -1,0 +1,26 @@
+.circle {
+
+  border-radius: 50%;
+  width: 205px;
+  height: 205px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: grey;
+  width: 70px;
+  height: 70px;
+  border: 5px solid black;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  color: white;
+}
+
+.started {
+  background-color: white;
+  color: black;
+}

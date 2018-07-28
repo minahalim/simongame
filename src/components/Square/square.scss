@@ -1,0 +1,33 @@
+.square {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+  border-radius: 0 0 100px 0;
+}
+
+.blue {
+  background-color: blue;
+  border-radius: 0 0 0 100px;
+}
+
+.green {
+  background-color: green;
+  border-radius: 0 100px 0 0;
+}
+
+.yellow {
+  background-color: yellow;
+  border-radius: 100px 0 0 0;
+}
+
+.opacity8 {
+  opacity: .8;
+}
+
+.opacity1 {
+  opacity: 1;
+}

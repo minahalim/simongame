@@ -1,0 +1,35 @@
+.board {
+  border-radius: 50%;
+  width: 205px;
+  height: 205px;
+  background-color: black;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  .red,
+  .green,
+  .blue,
+  .yellow {
+    position: absolute;
+  }
+
+  .yellow,
+  .green {
+    top: 0px;
+  }
+
+  .green,
+  .red {
+    left: 105px;
+  }
+
+  .blue,
+  .red {
+    top: 105px;
+  }
+}
+
