@@ -79,7 +79,7 @@ class Board extends PureComponent {
     });
   }
 
-  startSequence() {
+  startSequence(startGame = false) {
     // before starting a new sequence make sure the previous interval is dead
     clearInterval(this.handel);
 
@@ -87,9 +87,19 @@ class Board extends PureComponent {
     let count = 0;
 
     // change the game state to true to indicate it's started already
-    this.setState({
-      gameStarted: true
-    });
+    if (startGame) {
+      // reset everything when the user press on the start button
+      this.setState({
+        ...initialState,
+        prevSequence: [],
+        roundNumber: 0,
+        gameStarted: true
+      });
+    } else {
+      this.setState({
+        gameStarted: true
+      });
+    }
 
     this.handel = setInterval(() => {
       const { getGameResult } = this.props;
@@ -193,7 +203,7 @@ class Board extends PureComponent {
             updateUserSequence={squareId => this.updateUserSequence(squareId)}
           />)
         }
-        <StartButton roundNumber={roundNumber} gameStarted={gameStarted} startSequence={() => this.startSequence()} />
+        <StartButton gameStarted={gameStarted} roundNumber={roundNumber} startSequence={() => this.startSequence(true)} />
       </div>
     );
   }
